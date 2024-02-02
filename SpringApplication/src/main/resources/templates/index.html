@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome Page</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+    <link rel="stylesheet" href="css/home/top-bar.css">
+    <link rel="stylesheet" href="css/home/container-stable.css">
+    <link rel="stylesheet" href="css/home/image-slides.css">
+    <link rel="stylesheet" href="css/home/box-info.css">
+    <link rel="stylesheet" href="css/home/bottom-bar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color:antiquewhite">
+<div style="height: 1700px">
+
+<!-- <body th:style="'background: url(/assets/img/img.png) no-repeat center center fixed;'"> -->
+
+<!--<style th:inline="text">-->
+<!--    body{-->
+<!--        background: url([[@{/assets/img/img.png}]])-->
+<!--        no-repeat center center fixed;-->
+<!--    }-->
+<!--</style>-->
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg">
+    <!--<div class="container">-->
+    <div class="top-bar">
+        <div class="top-bar1">
+            <!-- Tworzymy 3 kontenery w górnym pasku. Kontenery kolejno: po lewej stronie (czas lokalny)
+             , po środku(nazwa Zoo), po prawej stronie (przyciski home,main,login)-->
+
+            <!-- Kontener po lewej -->
+            <nav class="navbar navbar-expand-lg">
+            <div class="left-section">
+               <!-- <img th:src="@{logoHOME.png}" alt="Image" > -->
+                <img style="width: 130px;height: 130px;margin-left: 0" src="https://lh5.googleusercontent.com/proxy/dosuu1KUMiFsaBxyKYMj8t9klMTJlV7c7KvAU1G_DCR8JwH3KhaHw6td1NcnqcyvmrenSMZJHIw=w1200-h630-p-k-no-nu" height="60" alt="" class="logo-csc">
+
+            </div>
+
+            <!-- Kontener po środku -->
+                <div class="middle-section">
+                    <a class="nazwa-zoo" href="/" style="font-size: 30px;color: black;  font-weight: lighter;
+    font-family: 'Roboto Thin';
+    text-align: center;">Miejski Ogród Zoologiczny w Warszawie</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                            aria-controls="navbarResponsive"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+            <!-- Kontener po prawej -->
+            <div class="right-section">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item active" style="background-color: white">
+                            <a class="nav-link" th:href="@{/index}" style="border-radius:10px;background-color: #58839a;color:white;height: 40px;width: 60px;margin-right: 2px">
+                                <svg xmlns="http://www.w3.org/2000/svg"  style="margin-top:2px;margin-left:12px;align-items: center" width="22" height="22" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                </svg>
+                                <span class="sr-only" >(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/main}" style="text-align:center;border-radius:10px;background-color: #58839a;color:white;height: 40px;width: 60px;margin-right: 2px">
+                                Main
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/main}" style="text-align:center;border-radius:10px;background-color: #58839a;color:white;height: 40px;width: 60px">Login</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            </nav>
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- div zawierający kontenery są nieruchome przy przewijaniu ekranu-->
+    <div class="container-stable" style="background-color: black">
+
+        <div class="menu-bar">
+            <ul>
+                <div class="menu-stylish">
+                    <li style="margin-top: 25px;font-size: 20px;font-family: Arial"><a href="#">Plan</a>
+                        <div class="sub-menu-l">
+                            <ul>
+                                <li><a href="#">Bilety</a> </li>
+                                <li><a href="#">Godziny</a> </li>
+                                <li><a href="#">Cennik</a> </li>
+                                <li><a href="#">Mapa</a> </li>
+
+                            </ul>
+
+                        </div>
+                    </li>
+                </div>
+
+                <div class="menu-stylish">
+                    <li style="margin-top: 25px;font-size: 20px;font-family: Arial"><a href="#">Wiadomości</a>
+                        <div class="sub-menu-l">
+                            <ul>
+                                <li><a href="#">Społeczność</a> </li>
+                                <li><a href="#">Opiekuni</a> </li>
+                                <li><a href="#">Zatrudnienie</a> </li>
+                                <li><a href="#">Kontakt</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="menu-stylish">
+                    <li style="margin-top: 25px;font-size: 20px;font-family: Arial"><a href="#">Odkrywaj</a>
+                        <div class="sub-menu-l">
+                            <ul>
+                                <li><a href="#">Jazda tropikalna</a> </li>
+                                <li><a href="#">Afrykańska Sawanna</a> </li>
+                            </ul>
+
+                        </div>
+                    </li>
+                </div>
+                <div class="menu-stylish">
+                    <li style="margin-top: 25px;font-size: 20px;font-family: Arial"><a href="#">Zwierzęta</a>
+                        <div class="sub-menu-l">
+                            <ul>
+                                <li><a href="#">Nasze zwierzęta</a> </li>
+                                <li><a href="#">Okres karmienia</a> </li>
+                                <li><a href="#">Zwierzęta na video</a> </li>
+                            </ul>
+
+                        </div>
+                    </li>
+                </div>
+                <div class="menu-stylish">
+                    <li style="margin-top: 25px;font-size: 20px;font-family: Arial"><a href="#">Edukacja</a>
+                        <div class="sub-menu-l">
+                            <ul>
+                                <li><a href="#">Klimat</a> </li>
+                                <li><a href="#">Edukacja o zwierzętach</a> </li>
+                                <li><a href="#">Program dla młodych</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                </div>
+
+
+            </ul>
+        </div>
+        <!-- div do umieszczenia informacji m.in  o biletach w związku z rezerwacjami-->
+        <div class="container-inform1">
+            <p style="text-align: center;font-size: 40px;color: white">
+                Poznaj nieznane dotąd tajemnice skrywane przez dziką naturę!
+            </p>
+        </div>
+
+
+
+        <!-- div w ktorym będą zamieszczone automatycznie przewijane slajdy zdjęć zwierząt -->
+        <div class="container-image-slides">
+
+            <!-- slajdy zdjec -->
+            <div id="slider">
+                <div>
+                    <figure>
+                        <img src="https://s28164.pcdn.co/files/African-Lion-Hasani-0003-9013-3-1280x720.jpg"  alt="img1" class="m1" >
+                    </figure>
+                    <figure>
+                        <img src="https://th.bing.com/th/id/OIP.Sa6J6TRLiXiUnvnHtKNlbgHaE6?pid=ImgDet&rs=1"  alt="img2" class="m2" >
+
+                    </figure>
+                    <figure>
+                        <img src="https://th.bing.com/th/id/R.301b4e61e3b6a93cee7790d9bcb61001?rik=LERQknkebsX0Kw&pid=ImgRaw&r=0"  alt="img3" class="m3" >
+                    </figure>
+                    <figure>
+                        <img src="https://th.bing.com/th/id/R.38ac35f1111f04fa85744f4ca0abf085?rik=gaLt0CuQkcJj0g&pid=ImgRaw&r=0" alt="img4" class="m4" >
+                    </figure>
+                    <figure>
+                        <img src="https://th.bing.com/th/id/R.9f2a0ac02237c051b66c23ab480da371?rik=DnstAeL2veL8Cg&riu=http%3a%2f%2fwww.socaldailyphoto.com%2fwp-content%2fuploads%2f2013%2f01%2fsable-antelope.jpg&ehk=QgeYK3enWNEhk%2bbsxc6bvwJPzXN7MMhTBuzzv6l4CMI%3d&risl=&pid=ImgRaw&r=0"  alt="img5" class="m5" >
+                    </figure>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- div w którym będą zawarte okna (1 okno - zakup bilety, 2 okno- galeria zdjęć, 3 okno - ciekawostki -->
+        <div class="information-boxes">
+            <!-- div informujący o kodach zniżkowych w razie zakupu biletu online -->
+
+            <div class="buyTickets">
+                <div>
+                    <img class="ticketImage-box1" src="https://s3.envato.com/files/320842304/PIS/01.jpg">
+                </div>
+
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <div class="buyTickets-field">
+                        <p style="text-align: center;font-size: 20px;color: white;font-weight: bold">
+                            Kup bilety
+                        </p>
+                    </div>
+                </a>
+
+                <div class="tickets-description">
+                    <p>
+                        Kupując bilet otrzymasz wiadomość zwrotną odnośnie Twojej planowanej wizyty
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- div informujący o dostępnych filmikach-->
+            <div class="watchVideos">
+                <div>
+                    <img class="animalImage-box2" src="https://th.bing.com/th/id/R.776b6d1cd61d0f60c3da4e31d29483fa?rik=F7fJZ0P8vA%2fp5A&riu=http%3a%2f%2fdetroitzoo.org%2fwp-content%2fuploads%2f2015%2f08%2fGrizzly-Boys.jpg&ehk=71qJojanY74dG%2bnPobKKYrvsLv7C%2fcAtxHmOq239lZI%3d&risl=&pid=ImgRaw&r=0">
+                </div>
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <div class="watchVideos-field">
+                            <p style="text-align: center;font-size: 20px;color: white;font-weight: bold">
+                            Obejrzyj video
+                        </p>
+                    </div>
+                </a>
+                <div class="video-description">
+                    Obejrzyj nasze najnowsze filmiki zawierające wszystkie informacje o Zoo w pigułce
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- div w ktorym będą zawarte najświeższe newsy dotyczące zoo w postaci linków-->
+        <div></div>
+
+
+    </div>
+
+    <!--Pasek końcowy -->
+
+    <div class="top-bar2" style="bottom: 0;padding-bottom: 100px;justify-content: space-between">
+        <div>
+            <div class="left-section-bottom" >
+                <div style="display:flex;flex-direction:row;width:150px; text-align: center;font-weight: bold;
+    font-style: italic;color: #B98F23;font-size: 13px;margin-left: 5px;margin-top: 25px">
+                    Mail: wawjednostkazoo123@gmail.com
+                </div>
+            </div>
+            <div class="middle-section-bottom">
+                <div style="display:flex;flex-direction:row;width:150px; text-align: center;font-weight: bold;
+    font-style: italic;color: white;font-size: 20px;margin-left: 450px">
+                    Warszawa Zoo
+                    +48 818100291
+                </div>
+            </div>
+            <div class="right-section-bottom">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <button class="chat-button">
+                        Chat
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</nav>
+
+
+<!--Using images in page    -->
+<!-- <img th:src="@{/assets/img/img.png}" alt="Image" class="img-fluid"> -->
+
+
+<!--<div class="container">
+    <div class="row">
+        <div class="col-md-10 mt-5">
+
+            <label style="font-size:30px">Welcome to the home page!</label>
+            <div style="font-size:20px">If you want to login, click <a th:href="@{/main}"><b>here</b></a> or in the
+                upper right corner.
+            </div>
+
+        </div>
+    </div>
+</div>-->
+
+<!--<div align="center">
+    <h1>Sales Records</h1>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="sale : ${listSale}">
+            <td th:text="${sale.id}">ID</td>
+            <td th:text="${sale.item}">Item Name</td>
+            <td th:text="${sale.quantity}">Quantity</td>
+            <td th:text="${sale.amount}">Amount</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>-->
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</div>
+</body>
+</html>
+
+
+
